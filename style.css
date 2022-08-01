@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --warna1 : #2A41F8;
+    --warna2 : #D6DEF3;
+    --warna3 : #F7F7F7;
+    --warna4 : #000000;
+    --warna5 : #FFFFFF;
+    --warna6 : #474747;
+}
+.nav-cont{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+nav{
+    background-color: var(--warna1);
+    padding: 10px;
+    max-width: 285px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    box-shadow: 5px 0 10px #00000042;
+    transform: translateX(-230px);
+    transition: transform 0.5s;
+}
+nav:hover{
+    transform: translateX(0);
+}
+nav:hover .nav-bar{
+    opacity: 1;
+}
+nav:hover .arrow-nav{
+    box-shadow: inset 5px 0px 3px #00000042;
+    border: 1px solid var(--warna1);
+    transform: scale(0.5);
+}
+.arrow-nav img{
+    transition: transform 0.5s;
+}
+nav:hover .arrow-nav img{
+    transform: rotate(-180deg);
+}
+nav::-webkit-scrollbar {
+    width: 10px;
+}
+nav::-webkit-scrollbar-track {
+    background: var(--warna1);
+}
+nav::-webkit-scrollbar-thumb {
+    background: var(--warna2);
+}
+nav::-webkit-scrollbar-thumb:hover {
+    background: var(--warna6);
+}
+
+.nav-bar{
+    padding: 10px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.nav-logo{
+    margin-bottom: 1vh;
+}
+.option-a{
+    text-decoration: none;
+    color: white;
+}
+.option-a :hover{
+    text-decoration: none;
+    color: var(--warna2);
+}
+.option{
+    width: 100%;
+    margin: 3vh 0;
+}
+.kelas-nav{
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+.arrow-nav{
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 250px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: inset 5px 0px 3px #00000042;
+    transition: transform 0.5s;
+}
+
+@media (max-width: 991.98px) { 
+    .nav-cont{
+        padding: 0;
+    }
+    .nav-bar{
+        opacity: 1;
+    }
+    nav{
+        max-width: 100%;
+        transform: translateX(0);
+    }
+    .arrow-nav{
+        display: none;
+    }
+}
